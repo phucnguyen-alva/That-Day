@@ -495,29 +495,29 @@ body.mainpage, body.about-page{
   
     /* Bubbles Avoiding the Center */
     #bubble1 {
-      top: 10%; /* Near the top-left corner */
+      top: 15%; /* Near the top-left corner */
       left: 5%;
       width: 80px;
       height: 80px;
     }
   
     #bubble2 {
-      top: 60%; /* Lower-left corner */
+      top: 40%; /* Lower-left corner */
       left: 10%;
       width: 80px;
       height: 80px;
     }
   
     #bubble3 {
-      top: 15%; /* Near the top-right corner */
-      left: 75%;
+      top: 20%; /* Near the top-right corner */
+      left: 65%;
       width: 80px;
       height: 80px;
     }
   
     #bubble4 {
-      top: 85%; /* Lower middle-right corner */
-      left: 60%;
+      top: 65%; /* Lower middle-right corner */
+      left: 65%;
       width: 80px;
       height: 80px;
     }
@@ -537,8 +537,8 @@ body.mainpage, body.about-page{
     }
   
     #bubble7 {
-      top: 5%; /* Top-middle right */
-      left: 55%;
+      top: 85%; /* Top-middle right */
+      left: 50%;
       width: 80px;
       height: 80px;
     }
