@@ -1,20 +1,38 @@
 
+
 /* Mainpage */
 body.mainpage, body.about-page{
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color:#F9F5E8;
     overflow: hidden;
   }
+
+  .background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./images/paper.gif'); /* Adjust path */
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    z-index: -1; /* Place it behind all other content */
+    opacity: 0.1; /* Reduce intensity */
+    pointer-events: none; /* Ensure it doesn't block interactions */  
+  }
+  
   
   /* Canvas Styling */
   canvas {
     display: block;
     width: 100vw;
     height: 100vh;
-    position: relative;
+    position: absolute;
+    top: -3%;
     z-index: 0;
   }
   
@@ -34,10 +52,10 @@ body.mainpage, body.about-page{
   #center-text {
     font-family: "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
     font-size: 1.8rem;
-    color: #fff9f9;
+    color: #000000;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    border-right: 2px solid rgba(0, 0, 0, 0.75);
     width: 0;
     animation: typewriter 2s steps(30, end) 1s forwards, blink 0.5s step-end infinite; /* Adjusted timing */
   }
@@ -55,7 +73,7 @@ body.mainpage, body.about-page{
   /* Blinking Cursor */
   @keyframes blink {
     from {
-      border-right-color: rgba(255, 255, 255, 0.75);
+      border-right-color: rgba(0, 0, 0, 0.75);
     }
     to {
       border-right-color: transparent;
@@ -107,7 +125,7 @@ body.mainpage, body.about-page{
     align-items: center;
     text-align: center;
     padding: 10px; /* Add padding to provide space around the text */
-    color: #ffffff;
+    color: #000000;
     font-family: "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
     font-size: 0.9rem;
     font-weight: bold;
@@ -116,7 +134,7 @@ body.mainpage, body.about-page{
     animation: float 4s infinite ease-in-out;
   
     /* Glassmorphism Style */
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    background: rgba(0, 0, 0, 0.1); 
     backdrop-filter: blur(8px); /* Blur effect */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     border: 1px solid rgba(255, 255, 255, 0.3); /* Soft border */
@@ -195,7 +213,7 @@ body.mainpage, body.about-page{
   }
   
   #bubble5 {
-    top: 50%;
+    top: 47%;
     left: 80%;
     width: 150px;
   }
@@ -208,7 +226,7 @@ body.mainpage, body.about-page{
   
   #bubble7 {
     top: 70%;
-    left: 65%;
+    left: 70%;
     width: 200px;
   }
   
@@ -470,16 +488,61 @@ body.mainpage, body.about-page{
     }
   }
   
-  /* Responsive Design for Small Screens (Phones) */
   @media screen and (max-width: 480px) {
     .bubble {
       font-size: 0.6rem;
     }
   
-    #bubble1, #bubble2, #bubble3, #bubble4, #bubble5, #bubble6, #bubble7 {
+    /* Bubbles Avoiding the Center */
+    #bubble1 {
+      top: 10%; /* Near the top-left corner */
+      left: 5%;
       width: 80px;
-      height: 80px; /* Ensures circles maintain shape */
+      height: 80px;
     }
+  
+    #bubble2 {
+      top: 60%; /* Lower-left corner */
+      left: 10%;
+      width: 80px;
+      height: 80px;
+    }
+  
+    #bubble3 {
+      top: 15%; /* Near the top-right corner */
+      left: 75%;
+      width: 80px;
+      height: 80px;
+    }
+  
+    #bubble4 {
+      top: 85%; /* Lower middle-right corner */
+      left: 60%;
+      width: 80px;
+      height: 80px;
+    }
+  
+    #bubble5 {
+      top: 40%; /* Upper middle-right */
+      left: 85%;
+      width: 80px;
+      height: 80px;
+    }
+  
+    #bubble6 {
+      top: 70%; /* Lower middle-left corner */
+      left: 5%;
+      width: 80px;
+      height: 80px;
+    }
+  
+    #bubble7 {
+      top: 5%; /* Top-middle right */
+      left: 55%;
+      width: 80px;
+      height: 80px;
+    }
+  
   
     body.about-page .container h1 {
       font-size: 2rem;
@@ -497,5 +560,105 @@ body.mainpage, body.about-page{
     }
   
   }
-  
-  
+
+
+/* Navigation Container */
+.dog-ear-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 120px; /* Matches the height of the buttons */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+/* Dog-Ear Buttons */
+.dog-ear-button {
+  position: absolute;
+  top: 0;
+  width: 120px; /* Width of the dog-ear */
+  height: 120px; /* Height of the dog-ear */
+  background: linear-gradient(135deg, #000000, #484848); /* Bookmark gradient */
+  clip-path: polygon(0 0, 100% 0, 0 100%); /* Triangle shape */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent text overflow */
+  opacity: 0; /* Initially hidden */
+  animation: fadeInDogEar 2s ease 7s forwards; 
+}
+
+.dog-ear-button.right {
+  right: 0;
+  clip-path: polygon(100% 0, 0 0, 100% 100%); /* Flip triangle for the right side */
+}
+
+/* Text Inside Dog-Ear Buttons */
+.dog-ear-text-left {
+  position: absolute;
+  transform: rotate(-45deg); /* Align with the diagonal */
+  top: 25%;
+  left: 10%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff; /* Visible text */
+}
+.dog-ear-text-right {
+  position: absolute;
+  transform: rotate(45deg); /* Align with the diagonal */
+  top: 25%;
+  left: 50%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: white; /* Visible text */
+}
+
+
+
+/* Hover Effects */
+.dog-ear-button:hover {
+  background: linear-gradient(135deg, #E1515B, #3D566C); /* Reverse gradient on hover */
+}
+
+@keyframes fadeInDogEar {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Center Logo */
+.dog-ear-logo {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0; /* Initially hidden */
+  animation: fadeInDogEar 2s ease 8s forwards; 
+}
+
+@keyframes fadeInDogEar {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.dog-ear-logo img {
+  height: 150px; /* Adjust logo size */
+  width: auto;
+  filter: grayscale(100%); /* Apply black-and-white filter */
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.dog-ear-logo img:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  filter: grayscale(0%); /* Remove black-and-white filter */
+}

@@ -26,10 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Initialize the Rive animation
 const riveInstance = new rive.Rive({
-  src: "/animation/read_the_air_update.riv", // Rive file URL
+  src: "/animation/breathe_the_memories.riv", // Rive file URL
   canvas: canvas,
   autoplay: true,
-  artboard: "HandFox",
+  artboard: "Artboard",
   stateMachines: ["State Machine 1"], // State machine name in Rive file
   fit: rive.Fit.CONTAIN, // Fit animation within the canvas
   alignment: rive.Alignment.CENTER, // Center the animation
