@@ -516,7 +516,7 @@ body.mainpage, body.about-page{
     }
   
     #bubble4 {
-      top: 65%; /* Lower middle-right corner */
+      top: 75%; /* Lower middle-right corner */
       left: 65%;
       width: 80px;
       height: 80px;
@@ -524,7 +524,7 @@ body.mainpage, body.about-page{
   
     #bubble5 {
       top: 40%; /* Upper middle-right */
-      left: 85%;
+      left: 75%;
       width: 80px;
       height: 80px;
     }
@@ -538,7 +538,7 @@ body.mainpage, body.about-page{
   
     #bubble7 {
       top: 85%; /* Top-middle right */
-      left: 50%;
+      left: 40%;
       width: 80px;
       height: 80px;
     }
