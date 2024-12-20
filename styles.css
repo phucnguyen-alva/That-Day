@@ -1,7 +1,7 @@
 
 
 /* Mainpage */
-body.mainpage, body.about-page{
+body.mainpage, body.about-page, body.subpage{
     margin: 0;
     padding: 0;
     width: 100%;
@@ -50,7 +50,7 @@ body.mainpage, body.about-page{
   
   /* Center Text Typewriter Effect */
   #center-text {
-    font-family: "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1.8rem;
     color: #000000;
     white-space: nowrap;
@@ -126,7 +126,7 @@ body.mainpage, body.about-page{
     text-align: center;
     padding: 10px; /* Add padding to provide space around the text */
     color: #000000;
-    font-family: "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 0.9rem;
     font-weight: bold;
     cursor: pointer;
@@ -153,37 +153,37 @@ body.mainpage, body.about-page{
   
   /* Hover Colors for Each Bubble */
   #bubble1:hover {
-    background-color: rgba(214, 179, 123, 0.8); /* Warm beige */
+    background-color:#B3C6DB; /* Warm beige */
     color: #3e2c25; /* Deep brown text */
   }
   
   #bubble2:hover {
-    background-color: rgba(152, 169, 140, 0.8); /* Olive green */
+    background-color: #B4D7BC; /* Olive green */
     color: #2d3b2e; /* Dark green text */
   }
   
   #bubble3:hover {
-    background-color: rgba(173, 153, 181, 0.8); /* Dusty lavender */
+    background-color: #E1515B; /* Dusty lavender */
     color: #3b3245; /* Deep purple text */
   }
   
   #bubble4:hover {
-    background-color: rgba(238, 210, 174, 0.8); /* Soft peach */
-    color: #4b3c2c; /* Chocolate brown text */
+    background-color: #3D566C; /* Soft peach */
+    color: #7caeda; /* Chocolate brown text */
   }
   
   #bubble5:hover {
-    background-color: rgba(180, 140, 150, 0.8); /* Vintage blush pink */
-    color: #5a3f3f; /* Deep red-brown text */
+    background-color: #6C5A72; /* Vintage blush pink */
+    color: #dfb6ed; /* Deep red-brown text */
   }
   
   #bubble6:hover {
-    background-color: rgba(140, 140, 165, 0.8); /* Slate blue */
+    background-color:#F8D699; /* Slate blue */
     color: #3c3c52; /* Deep slate text */
   }
   
   #bubble7:hover {
-    background-color: rgba(173, 163, 152, 0.8); /* Faded sepia */
+    background-color:#C7BE83; /* Faded sepia */
     color: #4f3e2c; /* Coffee brown text */
   }
   
@@ -257,209 +257,7 @@ body.mainpage, body.about-page{
   }
   
   
-  /* General Reset for About Page */
-  body.about-page * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Consistent box model */
-  }
   
-  /* Body Styling for About Page */
-  body.about-page {
-    background: #000000; /* Solid background color */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    overflow-y: auto; /* Enable scrolling within the content if necessary */
-    min-height: 100vh; /* Ensure the page covers the viewport height */
-  }
-  
-  /* Navigation Bar */
-  body.about-page .navbar {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: #042156; /* Deep blue background */
-    padding: 10px 20px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-  }
-  
-  body.about-page .nav-link {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 10px 15px;
-    margin-right: 10px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-  }
-  
-  body.about-page .nav-link:hover {
-    background-color: #c80877;
-    color: white;
-    transform: scale(1.05);
-  }
-  
-  /* Main Container */
-  body.about-page .container {
-    max-width: 800px; /* Limit the content width for better readability */
-    margin: 80px auto 0; /* Center the container and avoid navbar overlap */
-    text-align: center;
-    padding: 20px;
-  }
-  
-  /* Header Styling */
-  body.about-page .container h1 {
-    font-weight: 600;
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 30px;
-  
-    /* Gradient Text Styling */
-    background: linear-gradient(90deg, #c80877, #ffffff, #ffffff, #042156);
-    background-size: 200% 200%; /* Double the size for smooth animation */
-    -webkit-background-clip: text; /* Clip the gradient to the text */
-    -webkit-text-fill-color: transparent; /* Make the text transparent */
-    animation: gradientText 6s ease infinite; /* Apply animation */
-  }
-  
-  /* Gradient Animation Keyframes for Heading */
-  @keyframes gradientText {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  
-  
-  /* Content Section */
-  body.about-page .content {
-    background: linear-gradient(135deg, #c80877, #212121, #1b1b1b, #042156);
-    background-size: 300% 300%; /* Smooth animated gradient */
-    animation: gradientAnimation 6s ease infinite;
-    border-radius: 20px;
-    padding: 30px;
-    color: white;
-    text-align: justify;
-  }
-  
-  body.about-page .content p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-  }
-  
-  /* Image Section */
-  body.about-page .image {
-    margin-top: 20px; /* Add spacing above the image */
-  }
-  
-  body.about-page .image img {
-    max-width: 100%; /* Ensure the image doesn't exceed the container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Add subtle rounding to the corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  }
-  
-  /* Gradient Animation Keyframes */
-  @keyframes gradientAnimation {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  
-  body.about-page .btn {
-    display: inline-block;
-    margin: 5px 10px;
-    padding: 10px 20px; /* Adjust button size */
-    font-size: 1rem; /* Button text size */
-    font-weight: 600;
-    color: white; /* Button text color */
-    background-color: #c80877; /* Bright pink background */
-    border: none; /* Remove border */
-    border-radius: 30px; /* Rounded corners for modern look */
-    text-decoration: none; /* Remove underline */
-    cursor: pointer;
-    transition: all 0.3s ease; /* Smooth hover effect */
-  }
-  
-  body.about-page .btn:hover {
-    background-color: #1d06a1; /* Darker pink on hover */
-    transform: scale(1.05); /* Slight hover scaling */
-  }
-  
-  /* Button Container */
-  body.about-page .button-container {
-    text-align: center;
-    margin-top: 20px; /* Space above the button */
-  }
-  
-  
-  body.stories, main {
-    background-color: #000000; /* Black background */
-    color: #ffffff; /* White text for better readability */
-  }
-  
-  h1.stories{
-    margin-top: 22.5px;
-  }
-  
-  .button-container-stories {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .button-stories {
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: white;
-    border: none;
-    text-align: center;
-    cursor: pointer;
-  }
-  .button-stories:hover {
-    color: #c80877;
-  }
-  
-  #riveCanvas {
-    display: block;
-    width: 50vw; /* 50% of the viewport width */
-    height: 50vh; /* 50% of the viewport height */
-    top: 10px;
-  }
-  
-  
-  body.stories {
-    font-family: "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-  }
-  
-  
-  #other-stories-list li a {
-    text-decoration: none; /* Remove underline by default */
-    transition: all 0.3s ease; /* Smooth transition for effects */
-  }
-  
-  #other-stories-list li a:hover {
-    color: #c80877; /* Change text color on hover */
-    text-decoration: underline; /* Add underline on hover */
-    background-color: rgba(255, 102, 0, 0.1); /* Optional: Add a light background highlight */
-    padding: 0 5px; /* Add padding to make the highlight look neat */
-    border-radius: 3px; /* Smooth border for the highlight */
-  }
   
   
   /* Responsive Design for Medium Screens (Tablets) */
@@ -586,8 +384,15 @@ body.mainpage, body.about-page{
   justify-content: center;
   align-items: center;
   overflow: hidden; /* Prevent text overflow */
-  opacity: 0; /* Initially hidden */
-  animation: fadeInDogEar 2s ease 7s forwards; 
+  opacity: 0; /* Initially hidden */ 
+}
+
+body.mainpage .dog-ear-button {
+  animation: fadeInDogEar 2s ease 7s forwards; /* Delay for main page */
+}
+
+body.subpage .dog-ear-button {
+  opacity: 1; /* Immediately visible for subpage */
 }
 
 .dog-ear-button.right {
@@ -661,4 +466,73 @@ body.mainpage, body.about-page{
 .dog-ear-logo img:hover {
   transform: scale(1.1); /* Slight zoom effect on hover */
   filter: grayscale(0%); /* Remove black-and-white filter */
+}
+
+/* Subpage Specific Styling */
+
+.rive-container {
+  position: relative;
+  margin: 20px auto;
+  max-width: 400px;
+  height: 400px;
+  z-index: 10;
+}
+
+.button-container {
+  text-align: center;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 10px; /* Space between buttons */
+  justify-content: center;
+  z-index:10;
+  position:relative;
+}
+
+.download-btn, .submit-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #fff;
+  background-color: #000000;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 auto; /* Center horizontally */
+}
+
+.download-btn:hover {
+  background-color: #3D566C;
+}
+.submit-btn:hover {
+  background-color: #EE7180;
+}
+
+.description {
+  text-align: left; /* Keep text aligned to the left */
+  max-width: 800px;
+  margin: 20px auto; /* Center the container horizontally */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  z-index:10;
+  position:relative;
+}
+
+.rive-container {
+  position: relative;
+  margin: 0 auto;
+  width: 50vw; /* 50% of the viewport width */
+  height: 50vh; /* 50% of the viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align to the top center */
+  margin-top: 20px; /* Spacing from top of the page */
+}
+
+#riveCanvas {
+  display: block;
+  width: 100%;
+  height: 100%;
 }

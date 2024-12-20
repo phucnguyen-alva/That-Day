@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fox in the Flowerbed</title>
+  <script src="https://unpkg.com/@rive-app/canvas@2.7.0"></script>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="subpage">
+  <div class="background-overlay"></div>
+
+  <!-- Dog-Ear Navigation -->
+  <div class="dog-ear-nav">
+    <a href="/index.html" class="dog-ear-button left">
+      <span class="dog-ear-text-left">HOME</span>
+    </a>
+    <a href="#" class="dog-ear-button right">
+      <span class="dog-ear-text-right">OTHER SCENT</span>
+    </a>
+  </div>
+
+  <div class="rive-container">
+    <canvas id="riveCanvas"></canvas>
+    <script>
+      // Initialize the Rive animation
+      const canvas = document.getElementById("riveCanvas");
+    
+      const riveInstance = new rive.Rive({
+        src: "../animation/stories_animation.riv", // Path to the Rive file
+        canvas: canvas,
+        autoplay: true,
+        artboard: "flower fox", // Specify the artboard
+        stateMachines: ["State Machine 1"], // State machine in the Rive file
+        fit: rive.Fit.CONTAIN, // Contain the animation within the canvas
+        alignment: rive.Alignment.CENTER, // Center the animation
+        onLoad: () => {
+          console.log("Rive animation loaded");
+          resizeCanvas(); // Adjust canvas size on load
+        },
+      });
+    
+      // Adjust the canvas size to fit the viewport
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        riveInstance.resizeDrawingSurfaceToCanvas();
+      }
+    
+      // Listen for window resize events to dynamically adjust the canvas
+      window.addEventListener("resize", resizeCanvas);
+    </script>
+  </div>
+
+  <!-- Download Button -->
+  <div class="button-container">
+    <button class="download-btn">Read Online</button>
+    <button class="submit-btn">Submit Your Story</button>
+  </div>
+
+  <!-- Description Section -->
+  <div class="description">
+    <p>
+      Discover the essence of "Fox in the Flowerbed," a fragrance that captures the balance of curiosity and serenity. Its notes are inspired by blooming meadows, mysterious woodlands, and the playful spirit of nature.
+    </p>
+  </div>
+</body>
+</html>
