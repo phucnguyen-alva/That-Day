@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submission</title>
+  <script src="https://unpkg.com/@rive-app/canvas@2.7.0"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="subpage">
+  <div class="background-overlay"></div>
+    <!-- Dog-Ear Navigation -->
+    <div class="dog-ear-nav">
+        <a href="/index.html" class="dog-ear-button left">
+          <span class="dog-ear-text-left">HOME</span>
+        </a>
+        <a href="/about.html" class="dog-ear-button right">
+          <span class="dog-ear-text-right">ABOUT</span>
+        </a>
+      </div>
+
+    <h1 class="title-h1">Breathe The Memories</h1>
+    <!-- Submission Form -->
+    <div class="submission-form-container">
+      <form id="storySubmissionForm" action="/submit" method="post">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+  
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="scent">The Scent that Inspired You to Write</label>
+            <select id="scent" name="scent" required>
+              <option value="">-- Select a Scent --</option>
+              <option value="Cape_Heartache">Cape Heartache</option>
+              <option value="Fox_Flowerbed">Fox in the Flowerbed</option>
+              <option value="Memoirs_Trespasser">Memoirs of a Trespasser</option>
+              <option value="Saint_Julep">Sain Julep</option>
+              <option value="Slow_Explosions">Slow Explosions</option>
+              <option value="Love_Everything">In love with everything</option>
+              <option value="Waffle_Cone">A Whiff of Waffle Cone</option>
+            </select>
+          </div>
+          
+        <div class="form-group">
+          <label for="email">Story Title</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="story">Your Story</label>
+          <textarea id="story" name="story" rows="10" required></textarea>
+        </div>
+  
+        <button type="submit" class="submit-btn-sub">Submit</button>
+      </form>
+    </div>
+  </body>
+  </html>
+  
