@@ -1,44 +1,31 @@
-// Select elements
-const typewriterText = document.getElementById("center-text");
-const typewriterContainer = document.getElementById("center-text-container");
 const brandLogo = document.getElementById("brand-logo");
 const bubbles = document.querySelectorAll(".bubble");
 const canvas = document.getElementById("canvas");
 
-// Typewriter Effect Control: Remove blinking cursor after typing
-typewriterText.addEventListener("animationend", (event) => {
-  if (event.animationName === "typewriter") {
-    typewriterText.style.borderRight = "none"; // Remove the blinking cursor
-  }
-});
-
 // Coordinated Fade-in and Fade-out for Elements
 document.addEventListener("DOMContentLoaded", () => {
-
   // Fade-in Bubbles Sequentially
   setTimeout(() => {
     bubbles.forEach((bubble, index) => {
-      bubble.style.animation = `fadeIn 4s ease ${6 + index * 0.2}s forwards`;
+      bubble.style.animation = `fadeIn 4s ease ${1 + index * 0.2}s forwards`; // Start fade-in 5 seconds earlier
     });
-  }, 6000);
-
+  }, 1000); // Delay adjusted to 1 second instead of 6 seconds
 });
 
 // Initialize the Rive animation
 const riveInstance = new rive.Rive({
-  src: "/animation/breathe_the_memories.riv", // Rive file URL
+  src: "/animation/that_day.riv", // Rive file URL
   canvas: canvas,
   autoplay: true,
-  artboard: "Artboard",
+  artboard: "Artboard 2",
   stateMachines: ["State Machine 1"], // State machine name in Rive file
   fit: rive.Fit.CONTAIN, // Fit animation within the canvas
-  alignment: rive.Alignment.CENTER, // Center the animation
+  alignment: rive.Alignment.CENTER,
   onLoad: () => {
     console.log("Rive animation loaded");
     resizeCanvas(); // Resize the canvas on initial load
   },
 });
-
 
 // Resize canvas to fit the viewport
 function resizeCanvas() {
@@ -78,5 +65,3 @@ document.addEventListener("mousemove", (event) => {
     bubble.style.transform = `translate(${x * speed}rem, ${y * speed}rem) scale(1)`;
   });
 });
-
-
