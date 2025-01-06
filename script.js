@@ -14,10 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Initialize the Rive animation
 const riveInstance = new rive.Rive({
-  src: "/animation/that_day.riv", // Rive file URL
+  src: "/animation/that_day_update.riv", // Rive file URL
   canvas: canvas,
   autoplay: true,
-  artboard: "Artboard 2",
+  artboard: "Artboard",
   stateMachines: ["State Machine 1"], // State machine name in Rive file
   fit: rive.Fit.CONTAIN, // Fit animation within the canvas
   alignment: rive.Alignment.CENTER,
@@ -65,3 +65,5 @@ document.addEventListener("mousemove", (event) => {
     bubble.style.transform = `translate(${x * speed}rem, ${y * speed}rem) scale(1)`;
   });
 });
+
+

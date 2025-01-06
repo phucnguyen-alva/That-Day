@@ -107,37 +107,37 @@ body.mainpage, body.about-page, body.subpage{
   
   /* Hover Colors for Each Bubble */
   #bubble1:hover {
-    background-color:#B3C6DB; /* Warm beige */
+    background-color:#B3C6DB; /* Fox */
     color: #3e2c25; /* Deep brown text */
   }
   
   #bubble2:hover {
-    background-color: #B4D7BC; /* Olive green */
+    background-color: #B4D7BC; /* Julep */
     color: #2d3b2e; /* Dark green text */
   }
   
   #bubble3:hover {
-    background-color: #E1515B; /* Dusty lavender */
+    background-color: #E1515B; /* In Love */
     color: #3b3245; /* Deep purple text */
   }
   
   #bubble4:hover {
-    background-color: #3D566C; /* Soft peach */
+    background-color: #0A230F; /* Cape */
     color: #7caeda; /* Chocolate brown text */
   }
   
   #bubble5:hover {
-    background-color: #6C5A72; /* Vintage blush pink */
+    background-color: #6C5A72; /* MEMOIRS */
     color: #dfb6ed; /* Deep red-brown text */
   }
   
   #bubble6:hover {
-    background-color:#F8D699; /* Slate blue */
+    background-color:#F8D699; /* Waffle */
     color: #3c3c52; /* Deep slate text */
   }
   
   #bubble7:hover {
-    background-color:#C7BE83; /* Faded sepia */
+    background-color:#C7BE83; /* EXPLOSION */
     color: #4f3e2c; /* Coffee brown text */
   }
   
@@ -576,11 +576,14 @@ body.subpage .dog-ear-logo-sub {
 
 .form-group {
   margin-bottom: 15px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
 }
 
 .form-group label {
   display: block;
   font-size: 14px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   color: #ffffff;
   margin-bottom: 5px;
 }
@@ -593,10 +596,14 @@ body.subpage .dog-ear-logo-sub {
   border: 1px solid #CCCCCC;
   font-size: 14px;
   color: #333333;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
 }
 
 .form-group textarea {
   resize: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
 }
 
 .submit-btn-sub {
